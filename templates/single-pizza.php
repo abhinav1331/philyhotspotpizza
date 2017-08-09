@@ -82,7 +82,7 @@ $cartPageURL = esc_url( get_permalink($page->ID) );
 						 	?>
 						 </ul>
 						 <h1>Pizza Toppings</h1>
-						 <ul class="pizza-base">
+						 <ul class="pizza-baseToppings">
 						 	<?php 
 							$toppings_price = get_post_meta($post->ID,'toppings_price');
 							$toppingsIndex = 1; 
@@ -93,6 +93,7 @@ $cartPageURL = esc_url( get_permalink($page->ID) );
 									<label for="toppingsIndex<?php echo $toppingsIndex ?>"><?php echo ucfirst($val->toppings); ?></label>
 									<input type="checkbox" name="base_toppings" value="<?php echo $val->toppings ?>" id="toppingsIndex<?php echo $toppingsIndex ?>">
 									<input type="hidden" name="base_price" value="<?php echo $val->prize; ?>">
+									<input type="hidden" class="class_selected_<?php echo $val->size; ?>">
 								</li>
 								<?php
 								$toppingsIndex++;

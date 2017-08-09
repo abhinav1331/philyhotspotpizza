@@ -22,9 +22,9 @@
 				<div class="complete-row-toppings">
 					<div class="col-lg-3">
 						<select name="sizeToppings[]" id="size" class="form-control">
-							<option <?php if($size_price->size == "small") { echo "selected"; } ?> value="small">Small</option>
-							<option <?php if($size_price->size == "medium") { echo "selected"; } ?> value="medium">Medium</option>
-							<option <?php if($size_price->size == "large") { echo "selected"; } ?> value="large">large</option>
+							<option <?php if($toppings_pizza->size == "small") { echo "selected"; } ?> value="small">Small</option>
+							<option <?php if($toppings_pizza->size == "medium") { echo "selected"; } ?> value="medium">Medium</option>
+							<option <?php if($toppings_pizza->size == "large") { echo "selected"; } ?> value="large">large</option>
 						</select>
 					</div>
 					<div class="col-lg-3">

@@ -21,6 +21,13 @@ jQuery(document).ready(function(){
 	jQuery("input[name='base_size']").change(function(){
 		var priceSection = jQuery(this).siblings("input[name='base_price']").val();
 		var priceBase = jQuery(this).val();
+		jQuery(".pizza-baseToppings>li").each(function(){
+			jQuery(this).hide();
+			jQuery(this).find("input[name='base_toppings']").prop('checked', false);
+		});
+		jQuery(".class_selected_"+priceBase).each(function(){
+			jQuery(this).parent().show();
+		});
 		var Count = 0;
 		jQuery("input[name='base_toppings']:checked").each(function(){
 			Count = parseInt(Count) + parseInt(jQuery(this).siblings("input[name='base_price']").val());
